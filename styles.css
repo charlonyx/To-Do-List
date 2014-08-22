@@ -1,0 +1,20 @@
+#content{
+	text-align:center;
+	padding-right:40%;
+	padding-left:40%;
+	
+}
+
+ul{
+	list-style-type:none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hide{
+	display:none;
+}
