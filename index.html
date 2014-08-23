@@ -2,25 +2,32 @@
 <html>
 	<head>
 		<title>To Do List</title>
-		<script src="app.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="app.js"></script>
 	</head>
 	<body>
 		<div id="content">
 			<header>
 				<h1>To Do:</h1>
 			</header>
-			<div class='searchBar'>
-				<label>Search:
-					<input type='text' placeholder="Search Entries" id="search" oninput='search()'/>
-				</label>
-				
-				
-			</div>
-			<div class="form">
-				<label for="todo">Entry:</label>
-				<input type="text" placeholder="What do you need to do?" id="todo"/>
-				<input type="submit"  onclick="entry(todo)">
+			<div class='form-horizontal' role='form'>
+				<div class='searchBar form-group'>
+					<label class='col-sm-2 control-label'>Search: </label>
+					<div class='col-sm-8'>
+						<input type='text' placeholder="Search Entries" id="search" oninput='search()' class='form-control'/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="todo" class=' col-sm-2 control-label'>Entry:</label>
+					<div class='col-sm-8'>
+						<input type="text" placeholder="What do you need to do?" id="todo" class='form-control'/>	
+					</div>
+					<button onclick="entry(todo)" class='btn btn-primary col-sm-2'>Submit</button>
+				</div>
 			</div>
 			<ul id="list"></ul>
 			<footer>Made by Charlotte O'Neill &copy; 2014</footer>

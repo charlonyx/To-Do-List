@@ -25,11 +25,23 @@ function entry(todo){
 		}
 	};
 	
-	document.getElementById("list").appendChild(itm);
-	itm.appendChild(box);
+	var li = document.getElementById("list").appendChild(itm);
+	itm.insertBefore(box, itm.firstChild);
 	
 	todo.value = '';
 	
+	var del = document.createElement('button');
+	del.className = 'delete btn btn-default';
+	del.innerHTML = '-';
+	del.onclick=function(){
+		var index = list.indexOf(itm);
+		if (index > -1){
+			list.splice(index,1); 
+		}
+		itm.parentNode.removeChild(itm);
+	}
+	
+	itm.appendChild(del);
 }
 
 function search(){
